@@ -185,7 +185,13 @@ class Email:
         self.pasw_entry = Entry(self.root2, font=("times new roman", 18), bg="lightyellow", show="*")
         self.pasw_entry.place(x=250, y=200, width=330, height=30)
 
- 
+        Button(self.root2, activebackground="skyblue", text="SAVE", font=("times new roman", 20, "bold"),
+               bg="black", fg="white", command=self.save_setting).place(x=250, y=250, width=130, height=30)
+        Button(self.root2, activebackground="skyblue", text="CLEAR", font=("times new roman", 20, "bold"),
+               bg="#ffcccb", command=self.setting_clear, fg="black").place(x=400, y=250, width=130, height=30)
+
+        self.uname_entry.insert(0, self.uname)
+        self.pasw_entry.insert(0, self.pasw)
 
     def check_file_exist(self):
         if not os.path.exists("important.txt"):
