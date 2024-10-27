@@ -211,3 +211,5 @@ class Email:
             messagebox.showinfo("Success", "Email and password are saved successfully", parent=self.root2)
             self.check_file_exist()
 
+obj = Email(root)
+root.mainloop()
